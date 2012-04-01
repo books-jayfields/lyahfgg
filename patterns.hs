@@ -16,3 +16,5 @@ bmiTell3 weight height
   | bmi <= 30.0 = "fat"
   | otherwise = "whale"
   where bmi = weight / height ^ 2              
+
+calcBmis xs = [bmi | (w, h) <- xs, let bmi = w / h ^ 2]
